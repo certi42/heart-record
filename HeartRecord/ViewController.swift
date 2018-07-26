@@ -15,10 +15,15 @@ class ViewController: UIViewController, WCSessionDelegate {
     //MARK: Properties
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var fileStatusLabel: UILabel!
+    /// the text representation of the csv data
     var csv = ""
+    /// the 'SendFileManager` object which controls various methods of transmitting data
     var share : SendFileManager! = nil;
+    /// whether or not inital view setup is complete
     var setup = false
+    /// whether or not haptic feedback should be used
     var haptic = true
+    /// whether or not the app (this view) is currently in the background
     var background = false
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
@@ -88,8 +93,6 @@ class ViewController: UIViewController, WCSessionDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alert, animated: true)
         }
-        let fileM = FileManager.default
-        print(fileM)
     }
     
     override func viewDidLoad() {
@@ -107,6 +110,9 @@ class ViewController: UIViewController, WCSessionDelegate {
         let defaults = UserDefaults.standard;
         if let address = defaults.string(forKey: "server_preference") {
             share.serverAddress = address
+        }
+        if let patientID = defaults.string(forKey: "patient_id_preference") {
+            share.patientID = patientID
         }
         share.useDate = defaults.bool(forKey: "date_filename_preference")
         haptic = defaults.bool(forKey: "haptic_preference")
@@ -146,5 +152,4 @@ class ViewController: UIViewController, WCSessionDelegate {
     @IBAction func tapPressed() {
         sendMessage(["TestConnection": "Ping Watch"])
     }
-    
 }

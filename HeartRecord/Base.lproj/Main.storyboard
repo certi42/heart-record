@@ -144,13 +144,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haptic Feedback: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfo-Fb-95I">
-                                <rect key="frame" x="12" y="439" width="139" height="21"/>
+                                <rect key="frame" x="12" y="439" width="184" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save Data:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd1-XH-Wwv">
-                                <rect key="frame" x="12" y="352" width="82" height="21"/>
+                                <rect key="frame" x="12" y="352" width="140" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -160,6 +160,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="4Fx-tG-CfX"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient ID: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZH-f5-sha">
+                                <rect key="frame" x="12" y="478" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -174,7 +181,7 @@
                             <constraint firstItem="xPq-n7-yWH" firstAttribute="leading" secondItem="yJt-gb-WS4" secondAttribute="leading" id="7Ap-oq-dvK"/>
                             <constraint firstItem="fOS-EN-i2D" firstAttribute="leading" secondItem="X2g-3G-RNJ" secondAttribute="leading" id="9fH-cx-4XX"/>
                             <constraint firstItem="Bd1-XH-Wwv" firstAttribute="top" secondItem="X2g-3G-RNJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Add-rL-vJG"/>
-                            <constraint firstItem="MR3-DE-StD" firstAttribute="trailing" secondItem="Bd1-XH-Wwv" secondAttribute="trailing" constant="281" id="Glx-g3-0Qv"/>
+                            <constraint firstItem="MR3-DE-StD" firstAttribute="trailing" secondItem="Bd1-XH-Wwv" secondAttribute="trailing" constant="223" id="Glx-g3-0Qv"/>
                             <constraint firstItem="yJt-gb-WS4" firstAttribute="leading" secondItem="MR3-DE-StD" secondAttribute="leading" constant="12" id="Juz-45-Jnq"/>
                             <constraint firstItem="zGz-Ly-qSN" firstAttribute="trailing" secondItem="gIQ-5d-yJJ" secondAttribute="trailingMargin" id="MRI-lg-Zab"/>
                             <constraint firstItem="tfo-Fb-95I" firstAttribute="top" secondItem="X2g-3G-RNJ" secondAttribute="bottom" constant="95" id="RIT-Aq-Z2p"/>
@@ -184,7 +191,7 @@
                             <constraint firstItem="xPq-n7-yWH" firstAttribute="top" secondItem="ugv-lM-uMg" secondAttribute="bottom" constant="75" id="Zw7-Fv-kZV"/>
                             <constraint firstItem="fOS-EN-i2D" firstAttribute="trailing" secondItem="X2g-3G-RNJ" secondAttribute="trailing" id="auN-Om-Icf"/>
                             <constraint firstAttribute="trailing" secondItem="yJt-gb-WS4" secondAttribute="trailing" constant="333" id="exJ-9D-sXX"/>
-                            <constraint firstItem="MR3-DE-StD" firstAttribute="trailing" secondItem="tfo-Fb-95I" secondAttribute="trailing" constant="224" id="iNy-pz-u7x"/>
+                            <constraint firstItem="MR3-DE-StD" firstAttribute="trailing" secondItem="tfo-Fb-95I" secondAttribute="trailing" constant="179" id="iNy-pz-u7x"/>
                             <constraint firstItem="X2g-3G-RNJ" firstAttribute="top" secondItem="fOS-EN-i2D" secondAttribute="bottom" constant="8" id="pld-0G-eaB"/>
                             <constraint firstItem="yJt-gb-WS4" firstAttribute="top" secondItem="MR3-DE-StD" secondAttribute="top" constant="11" id="rub-gJ-3lP"/>
                             <constraint firstItem="xPq-n7-yWH" firstAttribute="leading" secondItem="fOS-EN-i2D" secondAttribute="leading" id="t4p-lG-YRe"/>
@@ -197,6 +204,7 @@
                         <outlet property="filenameLabel" destination="fOS-EN-i2D" id="L8n-wR-CWd"/>
                         <outlet property="hapticLabel" destination="tfo-Fb-95I" id="9ca-B7-wdu"/>
                         <outlet property="includeDateLabel" destination="X2g-3G-RNJ" id="rCJ-vn-x3Y"/>
+                        <outlet property="patientIdLabel" destination="oZH-f5-sha" id="cRM-vl-YZK"/>
                         <outlet property="saveDataLabel" destination="Bd1-XH-Wwv" id="C1v-gB-gdO"/>
                         <outlet property="serverAddressLabel" destination="xPq-n7-yWH" id="w6F-jR-odU"/>
                     </connections>

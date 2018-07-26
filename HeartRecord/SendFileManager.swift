@@ -16,17 +16,19 @@ class SendFileManager : NSObject, MFMailComposeViewControllerDelegate, UINavigat
     var view : ViewController
     var useDate : Bool
     var filename : String
+    var patientID : String
     var emailAddresses = ["bsiderowf@gmail.com"]
     var serverAddress = ""
     //"http://158.130.14.40"
     /// Creates a `FileManager` object
     /// - parameter viewbox: The parent `ViewController`
     /// - parameter server: the server address to which data should be uploaded
-    init(_ viewbox: ViewController, server: String = "http://borel.seas.upenn.edu:3456", includeDate: Bool = true, file : String = "data") {
+    init(_ viewbox: ViewController, server: String = "http://borel.seas.upenn.edu:3456", includeDate: Bool = true, file : String = "data", patient_id : String = "0") {
         view = viewbox
         serverAddress = server
         useDate = includeDate
         filename = file
+        patientID = patient_id
         super.init()
         UNUserNotificationCenter.current().delegate = self
     }
@@ -125,12 +127,11 @@ class SendFileManager : NSObject, MFMailComposeViewControllerDelegate, UINavigat
             print(error)
         }
         //http://158.130.14.40
-        //https://httpbin.org/post
-        //https://ptsv2.com/t/gp9xn-1527706659/post
         let url = URL(string: serverAddress)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("text/csv", forHTTPHeaderField: "Content-Type")
+        request.addValue(patientID, forHTTPHeaderField: "Patient-ID")
         let task = URLSession.shared.uploadTask(with: request, from: uploadData) { data, response, error in
             var inView = false
             DispatchQueue.main.async {
