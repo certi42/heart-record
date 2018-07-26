@@ -11,7 +11,7 @@ import MessageUI
 import Zip
 import UserNotifications
 
-class FileManager : NSObject, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate, UNUserNotificationCenterDelegate {
+class SendFileManager : NSObject, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate, UNUserNotificationCenterDelegate {
     
     var view : ViewController
     var useDate : Bool

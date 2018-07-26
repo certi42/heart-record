@@ -49,19 +49,21 @@ class CoreMotionRecorder {
             timer = Timer(fire: Date(), interval: recordingFrequency, repeats: true, block: { (timer) in
                 // Get data.
                 if let data = self.motion.deviceMotion {
-                    let x = String(data.userAcceleration.x.description.prefix(self.sigFigs))
-                    let y = String(data.userAcceleration.y.description.prefix(self.sigFigs))
-                    let z = String(data.userAcceleration.z.description.prefix(self.sigFigs))
-                    let xr = String(data.rotationRate.x.description.prefix(self.sigFigs))
-                    let yr = String(data.rotationRate.y.description.prefix(self.sigFigs))
-                    let zr = String(data.rotationRate.z.description.prefix(self.sigFigs))
+                    let x = self.formatDataPoint(data.userAcceleration.x)
+                    let y = self.formatDataPoint(data.userAcceleration.y)
+                    let z = self.formatDataPoint(data.userAcceleration.z)
+                    let xr = self.formatDataPoint(data.rotationRate.x)
+                    let yr = self.formatDataPoint(data.rotationRate.y)
+                    let zr = self.formatDataPoint(data.rotationRate.z)
                     // update labels
-                    self.view.updateMotionLabel("x", x, true)
-                    self.view.updateMotionLabel("y", y, true)
-                    self.view.updateMotionLabel("z", z, true)
-                    self.view.updateMotionLabel("x", xr, false)
-                    self.view.updateMotionLabel("y", yr, false)
-                    self.view.updateMotionLabel("z", zr, false)
+                    DispatchQueue.main.async {
+                        self.view.updateMotionLabel("x", x, true)
+                        self.view.updateMotionLabel("y", y, true)
+                        self.view.updateMotionLabel("z", z, true)
+                        self.view.updateMotionLabel("x", xr, false)
+                        self.view.updateMotionLabel("y", yr, false)
+                        self.view.updateMotionLabel("z", zr, false)
+                    }
                     let date = InterfaceController.microsecondsSince1970()
                     self.motionData += ("\(date),\(x),\(y),\(z),\(xr),\(yr),\(zr),\(self.view.heart.newData)\n")
                 }
@@ -74,8 +76,16 @@ class CoreMotionRecorder {
             isRecordingMotion = false
             view.presentAlert(withTitle: "Error", message: "Device motion unavailable", preferredStyle: .alert, actions: [WKAlertAction(title: "OK", style: .default){}])
         }
-        
     }
+    
+    func formatDataPoint(_ num : Double) -> String {
+        var output = String(num.description.prefix(sigFigs))
+        while(output.count < sigFigs) {
+            output = "0" + output
+        }
+        return output
+    }
+    
     /**
      Stops the recording of rotation rate and acceleration.
      Sends the collected data as an Array of Strings to `InterfaceController.motionData`,

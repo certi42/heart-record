@@ -17,11 +17,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var heart : HeartBeatRecorder! = nil
     /// The motion recording object - cmr stands for CoreMotionRecorder
     var cmr : CoreMotionRecorder! = nil
-    /// An object which records annotation for events which occur during recording
-    //static var notify : AnnotationManager! = nil
     /// An array which stores finished motion data
     static var motionData: [String] = []
-    static var heartData: [String] = []
+    //static var heartData: [String] = []
     // Data which has been formatted as a .csv
     static var data = ""
     /// Length, in characters, of the data to be sent to iPhone.
@@ -32,19 +30,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     /// controls automatic offloading of data to iPhone
     var postTimer : Timer! = nil
     /// automatic offloading interval in seconds. 300 seconds is 5 minutes
-    let postInterval = 300.0
+    var postInterval = 300.0
     /// date of start of current recording sessino
     var startDate : Date = Date()
-    /// whether or not notification is currently active
-    //var notificationActive = false
-    /// locally stored annotations
-    //static var annotations = ""
     
     //MARK: Properties
     @IBOutlet var heartRateLabel: WKInterfaceLabel!
     @IBOutlet var recordButton: WKInterfaceButton!
     @IBOutlet var interfaceTimer: WKInterfaceTimer!
-    //@IBOutlet var notificationButton: WKInterfaceButton!
     
     @IBOutlet var xAccLabel: WKInterfaceLabel!
     @IBOutlet var yAccLabel: WKInterfaceLabel!
@@ -58,8 +51,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.awake(withContext: context)
         heart = HeartBeatRecorder(self)
         cmr = CoreMotionRecorder(self)
-        //InterfaceController.notify = AnnotationManager()
-        setTitle("HeartRecord")
+        //setTitle("HeartRecord")
         if(!WCSession.default.isReachable) {
             let session = WCSession.default
             session.delegate = self
@@ -70,6 +62,17 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        let defaults = UserDefaults(suiteName: "group.com.company.HeartRecord")!
+        ExtensionDelegate.postAuto = defaults.bool(forKey: "post_preference")
+        if let postIntervalChoice = Double(defaults.string(forKey: "post_interval_preference")!) {
+            ExtensionDelegate.postInterval = postIntervalChoice * 60
+            postInterval = ExtensionDelegate.postInterval
+        }
+        if let recordingFreqChoice = Double(defaults.string(forKey: "recording_freq_preference")!) {
+            ExtensionDelegate.recordingFreq = recordingFreqChoice
+            cmr.recordingFrequency = 1/ExtensionDelegate.recordingFreq
+        }
+
     }
     
     override func didDeactivate() {
@@ -77,29 +80,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
-    /*@IBAction func notificationPressed() {
-        if(notificationActive) {
-            notificationActive = false
-            notificationButton.setBackgroundColor(UIColor.darkGray)
-            notificationButton.setTitle("I'm having a seizure")
-            presentAlert(withTitle: "Survey", message: "Are you OK?", preferredStyle: .alert, actions: [WKAlertAction(title: "Yes", style: .default, handler: {}), WKAlertAction(title: "No", style: .cancel, handler: {})])
-            //create annotation
-            InterfaceController.notify.createAnnotation(start_uutc: InterfaceController.notify.startDate)
-        }
-        else {
-            notificationActive = true
-            notificationButton.setBackgroundColor(UIColor.red)
-            notificationButton.setTitle("Seizure complete")
-            InterfaceController.notify.startEvent()
-            //notify friends and relatives
-        }
-    }*/
-    
     /// Deletes all currently stored data in the `InterfaceController`
     @IBAction func menuDeleteData() {
         InterfaceController.data = ""
         InterfaceController.motionData = []
-        //InterfaceController.heartData = []
     }
     
     /// Starts or stops recording
@@ -122,13 +106,15 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             startDate = Date()
             interfaceTimer.setDate(startDate)
             interfaceTimer.start()
-            postTimer = Timer(fire: startDate, interval: postInterval, repeats: true, block: { timer in
-                InterfaceController.motionData = self.cmr.getData(false)
-                if(self.formatData().count > 1000) {
-                    self.sendData(true)
-                }
-            })
-            RunLoop.current.add(postTimer, forMode: .defaultRunLoopMode)
+            if(ExtensionDelegate.postAuto) {
+                postTimer = Timer(fire: startDate, interval: postInterval, repeats: true, block: { timer in
+                    InterfaceController.motionData = self.cmr.getData(false)
+                    if(self.formatData().count > 1000) {
+                        self.sendData(true)
+                    }
+                })
+                RunLoop.current.add(postTimer, forMode: .defaultRunLoopMode)
+            }
         }
       
     }
@@ -196,13 +182,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
      data from sendDataChunks() was received, send the next chunk
      */
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        WKInterfaceDevice().play(.click)
         let title = message.keys.first!
         if(title == "Received") {
             InterfaceController.parcelIndex += 1
-            //print(message[title].debugDescription)
             let post = message[title].debugDescription.contains("post")
             sendDataChunks(i: InterfaceController.parcelIndex, postData: post)
+        }
+        else if(title == "TestConnection") {
+            WKInterfaceDevice().play(.click)
         }
     }
     /**

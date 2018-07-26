@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rat-Lq-BYh">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rat-Lq-BYh">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
+        <!--Settings Controller-->
+        <scene sceneID="Tdr-e1-531">
+            <objects>
+                <controller identifier="Settings Controller" id="cWv-UK-Wau" customClass="SettingsController" customModule="GetHeart_Extension">
+                    <items>
+                        <label alignment="center" text="Settings" id="eQK-jj-kFo"/>
+                        <label alignment="left" text="Auto Post: Yes" minimumScaleFactor="0.5" id="KQz-3m-Uta"/>
+                        <label alignment="left" text="Post Interval: 300s" minimumScaleFactor="0.69999999999999996" id="lFr-ru-ctK"/>
+                        <label alignment="left" text="Recording Freq: 30 Hz" minimumScaleFactor="0.69999999999999996" id="V1R-0B-vc9"/>
+                    </items>
+                    <connections>
+                        <outlet property="autoPostLabel" destination="KQz-3m-Uta" id="eoq-ey-JCV"/>
+                        <outlet property="postIntervalLabel" destination="lFr-ru-ctK" id="7U5-GH-ul6"/>
+                        <outlet property="recordingFreqLabel" destination="V1R-0B-vc9" id="p0U-hQ-g6d"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1203" y="357"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="JkD-o4-wOu">
             <objects>
@@ -73,7 +92,7 @@
                         <outlet property="yRotationLabel" destination="tqW-sp-0Cv" id="4f5-C5-Rm6"/>
                         <outlet property="zAccLabel" destination="6eh-Re-sbk" id="wC8-qN-d0T"/>
                         <outlet property="zRotationLabel" destination="o3k-JR-42g" id="4A7-Lo-b7w"/>
-                        <segue destination="FKs-Fq-Ahy" kind="relationship" relationship="nextPage" id="6vQ-LE-jbD"/>
+                        <segue destination="FKs-Fq-Ahy" kind="relationship" relationship="nextPage" id="ELV-TZ-Uiv"/>
                     </connections>
                 </controller>
             </objects>
@@ -85,7 +104,8 @@
                 <controller id="FKs-Fq-Ahy" customClass="AnnotationManager" customModule="GetHeart_Extension">
                     <items>
                         <label alignment="center" text="Notes" id="EtT-Xm-rrG"/>
-                        <button width="1" alignment="left" title="I'm having a seizure" id="Hyl-fv-85G">
+                        <button width="1" alignment="left" title="Start event" id="Hyl-fv-85G">
+                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="notificationPressed" destination="FKs-Fq-Ahy" id="hrm-L1-AMB"/>
                             </connections>
@@ -93,10 +113,11 @@
                     </items>
                     <connections>
                         <outlet property="notificationButton" destination="Hyl-fv-85G" id="Lda-7E-Arr"/>
+                        <segue destination="cWv-UK-Wau" kind="relationship" relationship="nextPage" id="2yb-yy-9rQ"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="926" y="357.5"/>
+            <point key="canvasLocation" x="925" y="357"/>
         </scene>
     </scenes>
 </document>

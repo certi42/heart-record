@@ -13,10 +13,13 @@ import AudioToolbox
 class ViewController: UIViewController, WCSessionDelegate {
     
     //MARK: Properties
+    @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var fileStatusLabel: UILabel!
     var csv = ""
-    var share : FileManager! = nil;
+    var share : SendFileManager! = nil;
     var setup = false
+    var haptic = true
+    var background = false
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -85,17 +88,32 @@ class ViewController: UIViewController, WCSessionDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alert, animated: true)
         }
+        let fileM = FileManager.default
+        print(fileM)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        background = false
         if(setup == false) {
-            share = FileManager(self)
+            share = SendFileManager(self, server: "http://borel.seas.upenn.edu:3456")
             let session = WCSession.default
             session.delegate = self
             session.activate()
             setup = true
+            //sets the settings button to a gear (⚙), but a flat character, not an emoji
+            settingsButton.setTitle("\u{2699}\u{0000FE0E}", for: .normal)
         }
+        let defaults = UserDefaults.standard;
+        if let address = defaults.string(forKey: "server_preference") {
+            share.serverAddress = address
+        }
+        share.useDate = defaults.bool(forKey: "date_filename_preference")
+        haptic = defaults.bool(forKey: "haptic_preference")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        background = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -120,7 +138,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     /// Post data to server - server address is currently hard coded
     @IBAction func postPressed() {
-        share.uploadFile(url: share.createFileUnzipped(csvText: csv))
+        share.uploadFile(fileURL: share.createFileUnzipped(csvText: csv))
     }
     
     /// Sends a message with arbitrary contents to the
@@ -128,4 +146,5 @@ class ViewController: UIViewController, WCSessionDelegate {
     @IBAction func tapPressed() {
         sendMessage(["TestConnection": "Ping Watch"])
     }
+    
 }

@@ -8,19 +8,63 @@
 	<array>
 		<dict>
 			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Haptic Feedback</string>
+			<key>Key</key>
+			<string>haptic_preference</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Group</string>
+			<string>Post</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Name</string>
+			<string>Server Address</string>
+			<key>Key</key>
+			<string>server_preference</string>
+			<key>DefaultValue</key>
+			<string>http://borel.seas.upenn.edu:3456</string>
+			<key>IsSecure</key>
+			<string>Default</string>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>File</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Include date in file name</string>
+			<key>Key</key>
+			<string>date_filename_preference</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>File Name</string>
 			<key>Key</key>
 			<string>name_preference</string>
 			<key>DefaultValue</key>
-			<string></string>
+			<string>data</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>
@@ -34,27 +78,27 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Enabled</string>
+			<string>Save data</string>
 			<key>Key</key>
-			<string>enabled_preference</string>
+			<string>save_data_preference</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSSliderSpecifier</string>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>APP INFO</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Version</string>
 			<key>Key</key>
-			<string>slider_preference</string>
+			<string>version_preference</string>
 			<key>DefaultValue</key>
-			<real>0.5</real>
-			<key>MinimumValue</key>
-			<integer>0</integer>
-			<key>MaximumValue</key>
-			<integer>1</integer>
-			<key>MinimumValueImage</key>
-			<string></string>
-			<key>MaximumValueImage</key>
-			<string></string>
+			<string>1.0</string>
 		</dict>
 	</array>
 </dict>

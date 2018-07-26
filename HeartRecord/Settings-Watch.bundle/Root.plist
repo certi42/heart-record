@@ -10,54 +10,90 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Group</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Name</string>
-			<key>Key</key>
-			<string>name_preference</string>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>IsSecure</key>
-			<false/>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
+			<string>Post data</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Enabled</string>
+			<string>Automatically post data</string>
 			<key>Key</key>
-			<string>enabled_preference</string>
+			<string>post_preference</string>
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSSliderSpecifier</string>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Post Interval</string>
 			<key>Key</key>
-			<string>slider_preference</string>
+			<string>post_interval_preference</string>
 			<key>DefaultValue</key>
-			<real>0.5</real>
-			<key>MinimumValue</key>
-			<integer>0</integer>
-			<key>MaximumValue</key>
-			<integer>1</integer>
-			<key>MinimumValueImage</key>
-			<string></string>
-			<key>MaximumValueImage</key>
-			<string></string>
+			<string>5</string>
+			<key>Titles</key>
+			<array>
+				<string>1 minute</string>
+				<string>3 minutes</string>
+				<string>5 minutes</string>
+				<string>7 minutes</string>
+				<string>9 minutes</string>
+				<string>11 minutes</string>
+				<string>13 minutes</string>
+				<string>15 minutes</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>1</integer>
+				<integer>3</integer>
+				<integer>5</integer>
+				<integer>7</integer>
+				<integer>9</integer>
+				<integer>11</integer>
+				<integer>13</integer>
+				<integer>15</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Recording</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Recording Frequency</string>
+			<key>Key</key>
+			<string>recording_freq_preference</string>
+			<key>DefaultValue</key>
+			<string>30</string>
+			<key>Titles</key>
+			<array>
+				<string>10 Hz</string>
+				<string>20 Hz</string>
+				<string>30 Hz</string>
+				<string>40 Hz</string>
+				<string>50 Hz</string>
+				<string>60 Hz</string>
+				<string>70 Hz</string>
+				<string>80 Hz</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>10</integer>
+				<integer>20</integer>
+				<integer>30</integer>
+				<integer>40</integer>
+				<integer>50</integer>
+				<integer>60</integer>
+				<integer>70</integer>
+				<integer>80</integer>
+			</array>
 		</dict>
 	</array>
 	<key>ApplicationGroupContainerIdentifier</key>
-	<string></string>
+	<string>group.com.company.HeartRecord</string>
 </dict>
 </plist>

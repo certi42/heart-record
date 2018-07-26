@@ -14,7 +14,7 @@ class AnnotationManager : WKInterfaceController {
     var startDate : Int64 = 0
     static var annotations = ""
     var notificationActive = false
-    let buttonColor = UIColor(red: CGFloat(22.0/255.0), green: CGFloat(22.0/255.0), blue: CGFloat(22.0/255.0), alpha: CGFloat(1.0))
+    //let buttonColor = UIColor(red: CGFloat(22.0/255.0), green: CGFloat(22.0/255.0), blue: CGFloat(22.0/255.0), alpha: CGFloat(1.0))
     
     @IBOutlet var notificationButton: WKInterfaceButton!
     
@@ -25,21 +25,20 @@ class AnnotationManager : WKInterfaceController {
     @IBAction func notificationPressed() {
          if(notificationActive) {
             notificationActive = false
-            notificationButton.setBackgroundColor(buttonColor)
-            notificationButton.setTitle("I'm having a seizure")
+            //notificationButton.setBackgroundColor(buttonColor)
+            notificationButton.setTitle("Start event")
+            
             presentAlert(withTitle: "Survey", message: "Are you OK?", preferredStyle: .alert, actions: [WKAlertAction(title: "Yes", style: .default, handler: {
                 self.createAnnotation(annotation_label: "event response: yes", start_uutc: self.startDate)
-                //self.notificationButton.setBackgroundColor(UIColor.green)
             }), WKAlertAction(title: "No", style: .cancel, handler: {
                 self.createAnnotation(annotation_label: "event response: no", start_uutc: self.startDate)
             })])
-            //create annotation
             
          }
          else {
             notificationActive = true
-            notificationButton.setBackgroundColor(UIColor.red)
-            notificationButton.setTitle("Seizure complete")
+            //notificationButton.setBackgroundColor(UIColor.red)
+            notificationButton.setTitle("End event")
             startEvent()
             //notify friends and family
          }

@@ -27,11 +27,15 @@
 		8442D75D20A3798B00E91B63 /* GetHeart.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8442D74020A3798800E91B63 /* GetHeart.app */; };
 		8442D76920A37AFF00E91B63 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8442D76820A37AFF00E91B63 /* HealthKit.framework */; };
 		8442D76D20A37DB800E91B63 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D76C20A37DB800E91B63 /* HealthKitManager.swift */; };
+		845FE9C520D809A6008C1850 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FE9C420D809A6008C1850 /* SettingsController.swift */; };
+		845FE9C720D84B85008C1850 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FE9C620D84B85008C1850 /* SettingsController.swift */; };
 		84B5BFCD20A5D77900EF0BC8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B5BFCC20A5D77900EF0BC8 /* HealthKit.framework */; };
 		84B5BFCF20A5E31100EF0BC8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B5BFCE20A5E31100EF0BC8 /* Interface.storyboard */; };
 		84B5BFD120A5EA6400EF0BC8 /* HeartBeatRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BFD020A5EA6400EF0BC8 /* HeartBeatRecorder.swift */; };
 		84B5BFD320A61C3A00EF0BC8 /* CoreMotionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BFD220A61C3A00EF0BC8 /* CoreMotionRecorder.swift */; };
-		84B5BFD720A6387200EF0BC8 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BFD620A6387200EF0BC8 /* FileManager.swift */; };
+		84B5BFD720A6387200EF0BC8 /* SendFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BFD620A6387200EF0BC8 /* SendFileManager.swift */; };
+		84CEEA1920D4186B00AF32EB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84CEEA1820D4186B00AF32EB /* Settings.bundle */; };
+		84CEEA1F20D41E7500AF32EB /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84CEEA1E20D41E7500AF32EB /* Settings-Watch.bundle */; };
 		84D678C220BEF8E00075C000 /* UploadFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D678C120BEF8E00075C000 /* UploadFileManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -174,12 +178,17 @@
 		8442D76620A37AFF00E91B63 /* HeartRecord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeartRecord.entitlements; sourceTree = "<group>"; };
 		8442D76820A37AFF00E91B63 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8442D76C20A37DB800E91B63 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		845FE9C320D801A8008C1850 /* GetHeart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetHeart.entitlements; sourceTree = "<group>"; };
+		845FE9C420D809A6008C1850 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		845FE9C620D84B85008C1850 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		84B5BFCB20A5D6A500EF0BC8 /* GetHeart Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GetHeart Extension.entitlements"; sourceTree = "<group>"; };
 		84B5BFCC20A5D77900EF0BC8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		84B5BFCE20A5E31100EF0BC8 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		84B5BFD020A5EA6400EF0BC8 /* HeartBeatRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeatRecorder.swift; sourceTree = "<group>"; };
 		84B5BFD220A61C3A00EF0BC8 /* CoreMotionRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionRecorder.swift; sourceTree = "<group>"; };
-		84B5BFD620A6387200EF0BC8 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		84B5BFD620A6387200EF0BC8 /* SendFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFileManager.swift; sourceTree = "<group>"; };
+		84CEEA1820D4186B00AF32EB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		84CEEA1E20D41E7500AF32EB /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Settings-Watch.bundle"; sourceTree = "<group>"; };
 		84D678C120BEF8E00075C000 /* UploadFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,13 +271,16 @@
 				8442D76620A37AFF00E91B63 /* HeartRecord.entitlements */,
 				8442D71020A378F100E91B63 /* AppDelegate.swift */,
 				8442D71220A378F100E91B63 /* ViewController.swift */,
+				845FE9C620D84B85008C1850 /* SettingsController.swift */,
 				8442D76C20A37DB800E91B63 /* HealthKitManager.swift */,
-				84B5BFD620A6387200EF0BC8 /* FileManager.swift */,
+				84B5BFD620A6387200EF0BC8 /* SendFileManager.swift */,
 				84D678C120BEF8E00075C000 /* UploadFileManager.swift */,
 				8442D71420A378F100E91B63 /* Main.storyboard */,
 				8442D71920A378FD00E91B63 /* LaunchScreen.storyboard */,
 				8442D71720A378FD00E91B63 /* Assets.xcassets */,
 				8442D71C20A378FD00E91B63 /* Info.plist */,
+				84CEEA1820D4186B00AF32EB /* Settings.bundle */,
+				84CEEA1E20D41E7500AF32EB /* Settings-Watch.bundle */,
 			);
 			path = HeartRecord;
 			sourceTree = "<group>";
@@ -294,6 +306,7 @@
 		8442D74120A3798800E91B63 /* GetHeart */ = {
 			isa = PBXGroup;
 			children = (
+				845FE9C320D801A8008C1850 /* GetHeart.entitlements */,
 				84B5BFCE20A5E31100EF0BC8 /* Interface.storyboard */,
 				8442D74520A3798B00E91B63 /* Assets.xcassets */,
 				8442D74720A3798B00E91B63 /* Info.plist */,
@@ -310,6 +323,7 @@
 				84B5BFD220A61C3A00EF0BC8 /* CoreMotionRecorder.swift */,
 				841BAC7720CAD35700E46DD9 /* AnnotationManager.swift */,
 				8442D75120A3798B00E91B63 /* InterfaceController.swift */,
+				845FE9C420D809A6008C1850 /* SettingsController.swift */,
 				8442D75320A3798B00E91B63 /* ExtensionDelegate.swift */,
 				8442D75520A3798B00E91B63 /* NotificationController.swift */,
 				8442D75720A3798B00E91B63 /* Assets.xcassets */,
@@ -435,6 +449,9 @@
 					8442D70C20A378F100E91B63 = {
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
@@ -450,10 +467,18 @@
 					};
 					8442D73F20A3798800E91B63 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8442D74B20A3798B00E91B63 = {
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.HealthKit.watchos = {
 								enabled = 1;
 							};
@@ -535,6 +560,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CEEA1920D4186B00AF32EB /* Settings.bundle in Resources */,
+				84CEEA1F20D41E7500AF32EB /* Settings-Watch.bundle in Resources */,
 				8442D71B20A378FD00E91B63 /* LaunchScreen.storyboard in Resources */,
 				8442D71820A378FD00E91B63 /* Assets.xcassets in Resources */,
 				8442D71620A378F100E91B63 /* Main.storyboard in Resources */,
@@ -579,8 +606,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845FE9C720D84B85008C1850 /* SettingsController.swift in Sources */,
 				84D678C220BEF8E00075C000 /* UploadFileManager.swift in Sources */,
-				84B5BFD720A6387200EF0BC8 /* FileManager.swift in Sources */,
+				84B5BFD720A6387200EF0BC8 /* SendFileManager.swift in Sources */,
 				8442D71320A378F100E91B63 /* ViewController.swift in Sources */,
 				8442D71120A378F100E91B63 /* AppDelegate.swift in Sources */,
 				8442D76D20A37DB800E91B63 /* HealthKitManager.swift in Sources */,
@@ -607,6 +635,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845FE9C520D809A6008C1850 /* SettingsController.swift in Sources */,
 				841BAC7820CAD35700E46DD9 /* AnnotationManager.swift in Sources */,
 				8442D75620A3798B00E91B63 /* NotificationController.swift in Sources */,
 				8442D75420A3798B00E91B63 /* ExtensionDelegate.swift in Sources */,
@@ -718,7 +747,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -772,7 +801,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -954,6 +983,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GetHeart/GetHeart.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N884JS863;
 				IBSC_MODULE = GetHeart_Extension;
@@ -973,6 +1003,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GetHeart/GetHeart.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N884JS863;
 				IBSC_MODULE = GetHeart_Extension;

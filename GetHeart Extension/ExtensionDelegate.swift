@@ -9,11 +9,21 @@
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
-
+    
+    static var recordingFreq : Double = 30
+    static var postInterval : Double = 300.0
+    static var postAuto : Bool = true
+    
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        
+        //set default settings
+        let defaults = UserDefaults(suiteName: "group.com.company.HeartRecord")
+        let dict = ["post_preference": true, "post_interval_preference": 5, "recording_freq_preference": 30] as [String : Any]
+        defaults?.register(defaults: dict)
     }
 
+    
     func applicationDidBecomeActive() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
