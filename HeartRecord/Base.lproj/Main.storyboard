@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HeartRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7O-vP-L6v">
+                                <rect key="frame" x="121" y="579" width="133" height="30"/>
+                                <state key="normal" title="Authorize HealthKit"/>
+                                <connections>
+                                    <action selector="authorizeHealthKitPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="1eV-Lf-0ux"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-99-19F">
+                                <rect key="frame" x="151" y="142" width="73" height="30"/>
+                                <state key="normal" title="Email Data"/>
+                                <connections>
+                                    <action selector="emailPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="66r-lG-mr8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Recieved at --:--" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvX-kM-ynh">
+                                <rect key="frame" x="103" y="83.5" width="169" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-Gy-68l">
+                                <rect key="frame" x="149" y="191" width="76" height="30"/>
+                                <state key="normal" title="Share Data"/>
+                                <connections>
+                                    <action selector="shareDataPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Fi-HK-Fzq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flG-Fj-NKw">
+                                <rect key="frame" x="107" y="450" width="160" height="30"/>
+                                <state key="normal" title="Test Watch Connection"/>
+                                <connections>
+                                    <action selector="tapPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="rkW-0e-wUD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekx-C7-fWf">
+                                <rect key="frame" x="154" y="250" width="67" height="30"/>
+                                <state key="normal" title="Post Data"/>
+                                <connections>
+                                    <action selector="postPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="WoL-Bk-Qjm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ekx-C7-fWf" firstAttribute="top" secondItem="Mdl-Gy-68l" secondAttribute="bottom" constant="29" id="6Ve-Wu-zWG"/>
+                            <constraint firstItem="TvX-kM-ynh" firstAttribute="centerX" secondItem="vbd-99-19F" secondAttribute="centerX" id="Bkl-vU-wAZ"/>
+                            <constraint firstAttribute="bottom" secondItem="TvX-kM-ynh" secondAttribute="bottom" constant="563" id="D2b-Wl-AJX"/>
+                            <constraint firstItem="O7O-vP-L6v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="559" id="N46-SE-dRG"/>
+                            <constraint firstItem="Mdl-Gy-68l" firstAttribute="centerX" secondItem="flG-Fj-NKw" secondAttribute="centerX" id="PZF-v1-rO9"/>
+                            <constraint firstItem="O7O-vP-L6v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QrL-tG-tRY"/>
+                            <constraint firstItem="ekx-C7-fWf" firstAttribute="centerX" secondItem="Mdl-Gy-68l" secondAttribute="centerX" id="R0X-KD-ync"/>
+                            <constraint firstItem="O7O-vP-L6v" firstAttribute="top" secondItem="flG-Fj-NKw" secondAttribute="bottom" constant="99" id="UdE-hk-J8b"/>
+                            <constraint firstItem="Mdl-Gy-68l" firstAttribute="centerX" secondItem="vbd-99-19F" secondAttribute="centerX" id="mvx-aG-g5D"/>
+                            <constraint firstItem="O7O-vP-L6v" firstAttribute="centerX" secondItem="TvX-kM-ynh" secondAttribute="centerX" id="nig-nG-FPH"/>
+                            <constraint firstItem="Mdl-Gy-68l" firstAttribute="top" secondItem="vbd-99-19F" secondAttribute="bottom" constant="19" id="rtk-uC-AEM"/>
+                            <constraint firstItem="vbd-99-19F" firstAttribute="top" secondItem="TvX-kM-ynh" secondAttribute="bottom" constant="38" id="taI-IX-Oyx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="fileStatusLabel" destination="TvX-kM-ynh" id="Hro-Pi-rEq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>

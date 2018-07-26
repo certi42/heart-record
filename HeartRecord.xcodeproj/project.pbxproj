@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840F9E2F20AC80EF00B27D27 /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F9E2E20AC80EF00B27D27 /* HeartRateManager.swift */; };
+		841BAC7820CAD35700E46DD9 /* AnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAC7720CAD35700E46DD9 /* AnnotationManager.swift */; };
+		8421D82220B30D27006CE21E /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8421D81520B30CD1006CE21E /* Zip.framework */; };
+		8421D82320B30D27006CE21E /* Zip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8421D81520B30CD1006CE21E /* Zip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8442D71120A378F100E91B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D71020A378F100E91B63 /* AppDelegate.swift */; };
 		8442D71320A378F100E91B63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D71220A378F100E91B63 /* ViewController.swift */; };
 		8442D71620A378F100E91B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8442D71420A378F100E91B63 /* Main.storyboard */; };
@@ -14,9 +18,66 @@
 		8442D71B20A378FD00E91B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8442D71920A378FD00E91B63 /* LaunchScreen.storyboard */; };
 		8442D72620A378FD00E91B63 /* HeartRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D72520A378FD00E91B63 /* HeartRecordTests.swift */; };
 		8442D73120A378FD00E91B63 /* HeartRecordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D73020A378FD00E91B63 /* HeartRecordUITests.swift */; };
+		8442D74620A3798B00E91B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8442D74520A3798B00E91B63 /* Assets.xcassets */; };
+		8442D74D20A3798B00E91B63 /* GetHeart Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8442D74C20A3798B00E91B63 /* GetHeart Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8442D75220A3798B00E91B63 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D75120A3798B00E91B63 /* InterfaceController.swift */; };
+		8442D75420A3798B00E91B63 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D75320A3798B00E91B63 /* ExtensionDelegate.swift */; };
+		8442D75620A3798B00E91B63 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D75520A3798B00E91B63 /* NotificationController.swift */; };
+		8442D75820A3798B00E91B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8442D75720A3798B00E91B63 /* Assets.xcassets */; };
+		8442D75D20A3798B00E91B63 /* GetHeart.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8442D74020A3798800E91B63 /* GetHeart.app */; };
+		8442D76920A37AFF00E91B63 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8442D76820A37AFF00E91B63 /* HealthKit.framework */; };
+		8442D76D20A37DB800E91B63 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442D76C20A37DB800E91B63 /* HealthKitManager.swift */; };
+		84B5BFCD20A5D77900EF0BC8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B5BFCC20A5D77900EF0BC8 /* HealthKit.framework */; };
+		84B5BFCF20A5E31100EF0BC8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B5BFCE20A5E31100EF0BC8 /* Interface.storyboard */; };
+		84B5BFD120A5EA6400EF0BC8 /* HeartBeatRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BFD020A5EA6400EF0BC8 /* HeartBeatRecorder.swift */; };
+		84B5BFD320A61C3A00EF0BC8 /* CoreMotionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BFD220A61C3A00EF0BC8 /* CoreMotionRecorder.swift */; };
+		84B5BFD720A6387200EF0BC8 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B5BFD620A6387200EF0BC8 /* FileManager.swift */; };
+		84D678C220BEF8E00075C000 /* UploadFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D678C120BEF8E00075C000 /* UploadFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8421D81420B30CD1006CE21E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8421D80C20B30CD1006CE21E /* Zip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 347E3A741C1DFFB500A11FD3;
+			remoteInfo = Zip;
+		};
+		8421D81620B30CD1006CE21E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8421D80C20B30CD1006CE21E /* Zip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 347E3A7E1C1DFFB500A11FD3;
+			remoteInfo = ZipTests;
+		};
+		8421D81820B30CD1006CE21E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8421D80C20B30CD1006CE21E /* Zip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343F50FF1C8DAEEC0028C434;
+			remoteInfo = "Zip OSX";
+		};
+		8421D81A20B30CD1006CE21E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8421D80C20B30CD1006CE21E /* Zip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343F51081C8DAEEC0028C434;
+			remoteInfo = "Zip OSXTests";
+		};
+		8421D81C20B30CD1006CE21E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8421D80C20B30CD1006CE21E /* Zip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 342545B51CE525B200336074;
+			remoteInfo = "Zip tvOS";
+		};
+		8421D82420B30D27006CE21E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8421D80C20B30CD1006CE21E /* Zip.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 347E3A731C1DFFB500A11FD3;
+			remoteInfo = Zip;
+		};
 		8442D72220A378FD00E91B63 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8442D70520A378F100E91B63 /* Project object */;
@@ -31,9 +92,62 @@
 			remoteGlobalIDString = 8442D70C20A378F100E91B63;
 			remoteInfo = HeartRecord;
 		};
+		8442D74E20A3798B00E91B63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8442D70520A378F100E91B63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8442D74B20A3798B00E91B63;
+			remoteInfo = "GetHeart Extension";
+		};
+		8442D75B20A3798B00E91B63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8442D70520A378F100E91B63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8442D73F20A3798800E91B63;
+			remoteInfo = GetHeart;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		840F9E4720AC888600B27D27 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8421D82320B30D27006CE21E /* Zip.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8442D76120A3798B00E91B63 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8442D74D20A3798B00E91B63 /* GetHeart Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8442D76520A3798B00E91B63 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8442D75D20A3798B00E91B63 /* GetHeart.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		840F9E2E20AC80EF00B27D27 /* HeartRateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateManager.swift; sourceTree = "<group>"; };
+		841BAC7720CAD35700E46DD9 /* AnnotationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationManager.swift; sourceTree = "<group>"; };
+		8421D80C20B30CD1006CE21E /* Zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zip.xcodeproj; path = "../Zip-master/Zip.xcodeproj"; sourceTree = "<group>"; };
 		8442D70D20A378F100E91B63 /* HeartRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442D71020A378F100E91B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8442D71220A378F100E91B63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +161,26 @@
 		8442D72C20A378FD00E91B63 /* HeartRecordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartRecordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442D73020A378FD00E91B63 /* HeartRecordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRecordUITests.swift; sourceTree = "<group>"; };
 		8442D73220A378FD00E91B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8442D74020A3798800E91B63 /* GetHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8442D74520A3798B00E91B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8442D74720A3798B00E91B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8442D74C20A3798B00E91B63 /* GetHeart Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GetHeart Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8442D75120A3798B00E91B63 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		8442D75320A3798B00E91B63 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		8442D75520A3798B00E91B63 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		8442D75720A3798B00E91B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8442D75920A3798B00E91B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8442D75A20A3798B00E91B63 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8442D76620A37AFF00E91B63 /* HeartRecord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeartRecord.entitlements; sourceTree = "<group>"; };
+		8442D76820A37AFF00E91B63 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		8442D76C20A37DB800E91B63 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		84B5BFCB20A5D6A500EF0BC8 /* GetHeart Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GetHeart Extension.entitlements"; sourceTree = "<group>"; };
+		84B5BFCC20A5D77900EF0BC8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		84B5BFCE20A5E31100EF0BC8 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		84B5BFD020A5EA6400EF0BC8 /* HeartBeatRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeatRecorder.swift; sourceTree = "<group>"; };
+		84B5BFD220A61C3A00EF0BC8 /* CoreMotionRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionRecorder.swift; sourceTree = "<group>"; };
+		84B5BFD620A6387200EF0BC8 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		84D678C120BEF8E00075C000 /* UploadFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +188,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8421D82220B30D27006CE21E /* Zip.framework in Frameworks */,
+				8442D76920A37AFF00E91B63 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,16 +207,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8442D74920A3798B00E91B63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B5BFCD20A5D77900EF0BC8 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8421D80D20B30CD1006CE21E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8421D81520B30CD1006CE21E /* Zip.framework */,
+				8421D81720B30CD1006CE21E /* ZipTests.xctest */,
+				8421D81920B30CD1006CE21E /* Zip.framework */,
+				8421D81B20B30CD1006CE21E /* Zip OSXTests.xctest */,
+				8421D81D20B30CD1006CE21E /* Zip.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8442D70420A378F100E91B63 = {
 			isa = PBXGroup;
 			children = (
+				8421D80C20B30CD1006CE21E /* Zip.xcodeproj */,
 				8442D70F20A378F100E91B63 /* HeartRecord */,
 				8442D72420A378FD00E91B63 /* HeartRecordTests */,
 				8442D72F20A378FD00E91B63 /* HeartRecordUITests */,
+				8442D74120A3798800E91B63 /* GetHeart */,
+				8442D75020A3798B00E91B63 /* GetHeart Extension */,
 				8442D70E20A378F100E91B63 /* Products */,
+				8442D76720A37AFF00E91B63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +250,8 @@
 				8442D70D20A378F100E91B63 /* HeartRecord.app */,
 				8442D72120A378FD00E91B63 /* HeartRecordTests.xctest */,
 				8442D72C20A378FD00E91B63 /* HeartRecordUITests.xctest */,
+				8442D74020A3798800E91B63 /* GetHeart.app */,
+				8442D74C20A3798B00E91B63 /* GetHeart Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,11 +259,15 @@
 		8442D70F20A378F100E91B63 /* HeartRecord */ = {
 			isa = PBXGroup;
 			children = (
+				8442D76620A37AFF00E91B63 /* HeartRecord.entitlements */,
 				8442D71020A378F100E91B63 /* AppDelegate.swift */,
 				8442D71220A378F100E91B63 /* ViewController.swift */,
+				8442D76C20A37DB800E91B63 /* HealthKitManager.swift */,
+				84B5BFD620A6387200EF0BC8 /* FileManager.swift */,
+				84D678C120BEF8E00075C000 /* UploadFileManager.swift */,
 				8442D71420A378F100E91B63 /* Main.storyboard */,
-				8442D71720A378FD00E91B63 /* Assets.xcassets */,
 				8442D71920A378FD00E91B63 /* LaunchScreen.storyboard */,
+				8442D71720A378FD00E91B63 /* Assets.xcassets */,
 				8442D71C20A378FD00E91B63 /* Info.plist */,
 			);
 			path = HeartRecord;
@@ -125,6 +291,43 @@
 			path = HeartRecordUITests;
 			sourceTree = "<group>";
 		};
+		8442D74120A3798800E91B63 /* GetHeart */ = {
+			isa = PBXGroup;
+			children = (
+				84B5BFCE20A5E31100EF0BC8 /* Interface.storyboard */,
+				8442D74520A3798B00E91B63 /* Assets.xcassets */,
+				8442D74720A3798B00E91B63 /* Info.plist */,
+			);
+			path = GetHeart;
+			sourceTree = "<group>";
+		};
+		8442D75020A3798B00E91B63 /* GetHeart Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84B5BFCB20A5D6A500EF0BC8 /* GetHeart Extension.entitlements */,
+				840F9E2E20AC80EF00B27D27 /* HeartRateManager.swift */,
+				84B5BFD020A5EA6400EF0BC8 /* HeartBeatRecorder.swift */,
+				84B5BFD220A61C3A00EF0BC8 /* CoreMotionRecorder.swift */,
+				841BAC7720CAD35700E46DD9 /* AnnotationManager.swift */,
+				8442D75120A3798B00E91B63 /* InterfaceController.swift */,
+				8442D75320A3798B00E91B63 /* ExtensionDelegate.swift */,
+				8442D75520A3798B00E91B63 /* NotificationController.swift */,
+				8442D75720A3798B00E91B63 /* Assets.xcassets */,
+				8442D75920A3798B00E91B63 /* Info.plist */,
+				8442D75A20A3798B00E91B63 /* PushNotificationPayload.apns */,
+			);
+			path = "GetHeart Extension";
+			sourceTree = "<group>";
+		};
+		8442D76720A37AFF00E91B63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84B5BFCC20A5D77900EF0BC8 /* HealthKit.framework */,
+				8442D76820A37AFF00E91B63 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +338,14 @@
 				8442D70920A378F100E91B63 /* Sources */,
 				8442D70A20A378F100E91B63 /* Frameworks */,
 				8442D70B20A378F100E91B63 /* Resources */,
+				8442D76520A3798B00E91B63 /* Embed Watch Content */,
+				840F9E4720AC888600B27D27 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8442D75C20A3798B00E91B63 /* PBXTargetDependency */,
+				8421D82520B30D27006CE21E /* PBXTargetDependency */,
 			);
 			name = HeartRecord;
 			productName = HeartRecord;
@@ -181,6 +388,40 @@
 			productReference = 8442D72C20A378FD00E91B63 /* HeartRecordUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8442D73F20A3798800E91B63 /* GetHeart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8442D76220A3798B00E91B63 /* Build configuration list for PBXNativeTarget "GetHeart" */;
+			buildPhases = (
+				8442D73E20A3798800E91B63 /* Resources */,
+				8442D76120A3798B00E91B63 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8442D74F20A3798B00E91B63 /* PBXTargetDependency */,
+			);
+			name = GetHeart;
+			productName = GetHeart;
+			productReference = 8442D74020A3798800E91B63 /* GetHeart.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8442D74B20A3798B00E91B63 /* GetHeart Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8442D75E20A3798B00E91B63 /* Build configuration list for PBXNativeTarget "GetHeart Extension" */;
+			buildPhases = (
+				8442D74820A3798B00E91B63 /* Sources */,
+				8442D74920A3798B00E91B63 /* Frameworks */,
+				8442D74A20A3798B00E91B63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GetHeart Extension";
+			productName = "GetHeart Extension";
+			productReference = 8442D74C20A3798B00E91B63 /* GetHeart Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,6 +434,11 @@
 				TargetAttributes = {
 					8442D70C20A378F100E91B63 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					8442D72020A378FD00E91B63 = {
 						CreatedOnToolsVersion = 9.3;
@@ -201,6 +447,20 @@
 					8442D72B20A378FD00E91B63 = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = 8442D70C20A378F100E91B63;
+					};
+					8442D73F20A3798800E91B63 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					8442D74B20A3798B00E91B63 = {
+						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -215,14 +475,60 @@
 			mainGroup = 8442D70420A378F100E91B63;
 			productRefGroup = 8442D70E20A378F100E91B63 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8421D80D20B30CD1006CE21E /* Products */;
+					ProjectRef = 8421D80C20B30CD1006CE21E /* Zip.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8442D70C20A378F100E91B63 /* HeartRecord */,
 				8442D72020A378FD00E91B63 /* HeartRecordTests */,
 				8442D72B20A378FD00E91B63 /* HeartRecordUITests */,
+				8442D73F20A3798800E91B63 /* GetHeart */,
+				8442D74B20A3798B00E91B63 /* GetHeart Extension */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8421D81520B30CD1006CE21E /* Zip.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Zip.framework;
+			remoteRef = 8421D81420B30CD1006CE21E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8421D81720B30CD1006CE21E /* ZipTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZipTests.xctest;
+			remoteRef = 8421D81620B30CD1006CE21E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8421D81920B30CD1006CE21E /* Zip.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Zip.framework;
+			remoteRef = 8421D81820B30CD1006CE21E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8421D81B20B30CD1006CE21E /* Zip OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Zip OSXTests.xctest";
+			remoteRef = 8421D81A20B30CD1006CE21E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8421D81D20B30CD1006CE21E /* Zip.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Zip.framework;
+			remoteRef = 8421D81C20B30CD1006CE21E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8442D70B20A378F100E91B63 /* Resources */ = {
@@ -249,6 +555,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8442D73E20A3798800E91B63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8442D74620A3798B00E91B63 /* Assets.xcassets in Resources */,
+				84B5BFCF20A5E31100EF0BC8 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8442D74A20A3798B00E91B63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8442D75820A3798B00E91B63 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -256,8 +579,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D678C220BEF8E00075C000 /* UploadFileManager.swift in Sources */,
+				84B5BFD720A6387200EF0BC8 /* FileManager.swift in Sources */,
 				8442D71320A378F100E91B63 /* ViewController.swift in Sources */,
 				8442D71120A378F100E91B63 /* AppDelegate.swift in Sources */,
+				8442D76D20A37DB800E91B63 /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,9 +603,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8442D74820A3798B00E91B63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841BAC7820CAD35700E46DD9 /* AnnotationManager.swift in Sources */,
+				8442D75620A3798B00E91B63 /* NotificationController.swift in Sources */,
+				8442D75420A3798B00E91B63 /* ExtensionDelegate.swift in Sources */,
+				84B5BFD120A5EA6400EF0BC8 /* HeartBeatRecorder.swift in Sources */,
+				8442D75220A3798B00E91B63 /* InterfaceController.swift in Sources */,
+				840F9E2F20AC80EF00B27D27 /* HeartRateManager.swift in Sources */,
+				84B5BFD320A61C3A00EF0BC8 /* CoreMotionRecorder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8421D82520B30D27006CE21E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Zip;
+			targetProxy = 8421D82420B30D27006CE21E /* PBXContainerItemProxy */;
+		};
 		8442D72320A378FD00E91B63 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8442D70C20A378F100E91B63 /* HeartRecord */;
@@ -289,6 +634,16 @@
 			isa = PBXTargetDependency;
 			target = 8442D70C20A378F100E91B63 /* HeartRecord */;
 			targetProxy = 8442D72D20A378FD00E91B63 /* PBXContainerItemProxy */;
+		};
+		8442D74F20A3798B00E91B63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8442D74B20A3798B00E91B63 /* GetHeart Extension */;
+			targetProxy = 8442D74E20A3798B00E91B63 /* PBXContainerItemProxy */;
+		};
+		8442D75C20A3798B00E91B63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8442D73F20A3798800E91B63 /* GetHeart */;
+			targetProxy = 8442D75B20A3798B00E91B63 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -429,7 +784,9 @@
 		8442D73620A378FD00E91B63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HeartRecord/HeartRecord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N884JS863;
 				INFOPLIST_FILE = HeartRecord/Info.plist;
@@ -447,7 +804,9 @@
 		8442D73720A378FD00E91B63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HeartRecord/HeartRecord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9N884JS863;
 				INFOPLIST_FILE = HeartRecord/Info.plist;
@@ -544,6 +903,90 @@
 			};
 			name = Release;
 		};
+		8442D75F20A3798B00E91B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "GetHeart Extension/GetHeart Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N884JS863;
+				INFOPLIST_FILE = "GetHeart Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.HeartRecord.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		8442D76020A3798B00E91B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "GetHeart Extension/GetHeart Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N884JS863;
+				INFOPLIST_FILE = "GetHeart Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.HeartRecord.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		8442D76320A3798B00E91B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N884JS863;
+				IBSC_MODULE = GetHeart_Extension;
+				INFOPLIST_FILE = GetHeart/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.HeartRecord.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		8442D76420A3798B00E91B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N884JS863;
+				IBSC_MODULE = GetHeart_Extension;
+				INFOPLIST_FILE = GetHeart/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.HeartRecord.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +1022,24 @@
 			buildConfigurations = (
 				8442D73C20A378FD00E91B63 /* Debug */,
 				8442D73D20A378FD00E91B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8442D75E20A3798B00E91B63 /* Build configuration list for PBXNativeTarget "GetHeart Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8442D75F20A3798B00E91B63 /* Debug */,
+				8442D76020A3798B00E91B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8442D76220A3798B00E91B63 /* Build configuration list for PBXNativeTarget "GetHeart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8442D76320A3798B00E91B63 /* Debug */,
+				8442D76420A3798B00E91B63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

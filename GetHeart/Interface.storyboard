@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rat-Lq-BYh">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="JkD-o4-wOu">
+            <objects>
+                <controller id="rat-Lq-BYh" customClass="InterfaceController" customModule="GetHeart_Extension">
+                    <items>
+                        <label alignment="center" text="Recording" textAlignment="center" id="SDf-5u-61D"/>
+                        <timer alignment="center" textAlignment="center" previewedSeconds="0" id="o36-rE-fyl">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </timer>
+                        <button width="1" alignment="left" title="Start" id="5K0-OJ-NVx" userLabel="Record Motion Button">
+                            <connections>
+                                <action selector="toggleRecording" destination="rat-Lq-BYh" id="Bme-JF-xp3"/>
+                            </connections>
+                        </button>
+                        <label width="136" alignment="left" text="Heart Rate" textAlignment="left" id="Hrd-1Q-Z4x"/>
+                        <label alignment="left" alpha="0.5" text="Heart Rate: --- bpm" minimumScaleFactor="0.69999999999999996" id="idg-Ts-CiV">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label alignment="left" text="Acceleration" id="PsV-sa-5de"/>
+                        <label alignment="left" alpha="0.5" text="x: --- g" id="B3u-xs-wIb">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label alignment="left" alpha="0.5" text="y: --- g" id="5mO-7D-R3v">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label alignment="left" alpha="0.5" text="z: --- g" id="6eh-Re-sbk">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label alignment="left" text="Rotation" id="Tsp-9U-nNf"/>
+                        <label alignment="left" alpha="0.5" text="x: --- rad/s" id="V2m-U3-Loz">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label alignment="left" alpha="0.5" text="y: --- rad/s" id="tqW-sp-0Cv">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label alignment="left" alpha="0.5" text="z: --- rad/s" id="o3k-JR-42g">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                    </items>
+                    <menu key="menu" id="d6g-AQ-aRI">
+                        <items>
+                            <menuItem title="Send Data" icon="share" id="vEN-sP-oJ2">
+                                <connections>
+                                    <action selector="sendDataPressed" destination="rat-Lq-BYh" id="lsg-2s-7Qp"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete Data" icon="trash" id="7io-dk-rC4">
+                                <connections>
+                                    <action selector="menuDeleteData" destination="rat-Lq-BYh" id="yuJ-Ie-A16"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Cancel" icon="decline" id="Byi-m6-gIM"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="heartRateLabel" destination="idg-Ts-CiV" id="bbE-UJ-83B"/>
+                        <outlet property="interfaceTimer" destination="o36-rE-fyl" id="NcM-72-FAQ"/>
+                        <outlet property="recordButton" destination="5K0-OJ-NVx" id="ILm-ja-VmO"/>
+                        <outlet property="xAccLabel" destination="B3u-xs-wIb" id="DDR-30-eeY"/>
+                        <outlet property="xRotationLabel" destination="V2m-U3-Loz" id="lib-nh-Hjj"/>
+                        <outlet property="yAccLabel" destination="5mO-7D-R3v" id="nfR-G9-7g4"/>
+                        <outlet property="yRotationLabel" destination="tqW-sp-0Cv" id="4f5-C5-Rm6"/>
+                        <outlet property="zAccLabel" destination="6eh-Re-sbk" id="wC8-qN-d0T"/>
+                        <outlet property="zRotationLabel" destination="o3k-JR-42g" id="4A7-Lo-b7w"/>
+                        <segue destination="FKs-Fq-Ahy" kind="relationship" relationship="nextPage" id="6vQ-LE-jbD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="625" y="340"/>
+        </scene>
+        <!--Annotation Manager-->
+        <scene sceneID="SxW-gt-QKX">
+            <objects>
+                <controller id="FKs-Fq-Ahy" customClass="AnnotationManager" customModule="GetHeart_Extension">
+                    <items>
+                        <label alignment="center" text="Notes" id="EtT-Xm-rrG"/>
+                        <button width="1" alignment="left" title="I'm having a seizure" id="Hyl-fv-85G">
+                            <connections>
+                                <action selector="notificationPressed" destination="FKs-Fq-Ahy" id="hrm-L1-AMB"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="notificationButton" destination="Hyl-fv-85G" id="Lda-7E-Arr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="926" y="357.5"/>
+        </scene>
+    </scenes>
+</document>
