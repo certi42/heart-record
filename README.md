@@ -1,5 +1,5 @@
 # HeartRecord
-HeartRecord is an iPhone and Apple Watch app which records [various data](##Data "various data"), and can transmit that data in a variety of different ways.
+HeartRecord is an iPhone and Apple Watch app which records [various data](#Data "various data"), and can transmit that data in a [variety of different ways](#sending-data "various ways").
 
 ## Data
 ### Data Types
@@ -24,7 +24,8 @@ Once data has been collected and sent to the iPhone, there are a variety of ways
 
 ## Built-in Settings
 ### iPhone
-![iPhone Settings Pane](http://www.github.com/certi42/heart-record/Images/iphone-settings.jpeg "iPhone Settings Pane")
+![iPhone Settings Pane](https://github.com/certi42/heart-record/blob/master/Images/iphone-settings.jpeg "iPhone Settings Pane")
+
 **Patient ID** -- Specifies unique identifier which applies to the patient whose data is being recorded. This is used to specify the folder name on Blackfynn to which the data should be uploaded.
 
 **Haptic Feedback** -- By default, while the app is open, the iPhone will buzz whenever receives data from the Apple Watch. This setting specifies whether or not this should happen.
@@ -38,7 +39,7 @@ Once data has been collected and sent to the iPhone, there are a variety of ways
 **Save Data** -- Specifies whether or not the data should be saved on the iPhone instead of transmitted. Currently not implemented. 
 
 ### Apple Watch
-![Apple Watch Settings Pane](http://www.github.com/certi42/heart-record/Images/watch-settings.jpeg "Apple Watch Settings Pane")
+![Apple Watch Settings Pane](https://github.com/certi42/heart-record/blob/master/Images/watch-settings.jpeg "Apple Watch Settings Pane")
 
 **Automatically Post Data** -- Specifies whether or not data from the Apple Watch should be automatically transmitted to the iPhone. Data transmitted this way is always forwarded to the server address specified in the iPhone settings.
 
