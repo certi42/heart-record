@@ -151,6 +151,7 @@
 /* Begin PBXFileReference section */
 		840F9E2E20AC80EF00B27D27 /* HeartRateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateManager.swift; sourceTree = "<group>"; };
 		841BAC7720CAD35700E46DD9 /* AnnotationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationManager.swift; sourceTree = "<group>"; };
+		8421C6AA210B7AC700BEB2C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8421D80C20B30CD1006CE21E /* Zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Zip.xcodeproj; path = "../Zip-master/Zip.xcodeproj"; sourceTree = "<group>"; };
 		8442D70D20A378F100E91B63 /* HeartRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442D71020A378F100E91B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +243,7 @@
 		8442D70420A378F100E91B63 = {
 			isa = PBXGroup;
 			children = (
+				8421C6AA210B7AC700BEB2C2 /* README.md */,
 				8421D80C20B30CD1006CE21E /* Zip.xcodeproj */,
 				8442D70F20A378F100E91B63 /* HeartRecord */,
 				8442D72420A378FD00E91B63 /* HeartRecordTests */,

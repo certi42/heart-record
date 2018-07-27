@@ -17,7 +17,7 @@ class SendFileManager : NSObject, MFMailComposeViewControllerDelegate, UINavigat
     var useDate : Bool
     var filename : String
     var patientID : String
-    var emailAddresses = ["bsiderowf@gmail.com"]
+    var emailAddresses = [""]
     var serverAddress = ""
     //"http://158.130.14.40"
     /// Creates a `FileManager` object
